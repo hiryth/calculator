@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --primary-color: #3caea3;
+  --secondary-color: #20639b;
+  --darker-color: #173f5f;
+  --font-color: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0px 0px;
+  grid-template-areas:
+    "result result result result"
+    "C modulus backspace divide"
+    "num-7 num-8 num-9 multiply"
+    "num-4 num-5 num-6 subtract"
+    "num-1 num-2 num-3 add"
+    "plus-minus num-0 dot equals";
+  border-radius: 0px 0.625rem 0.625rem 0px;
+  -webkit-box-shadow: 5px 5px 6px -3px #000000;
+  box-shadow: 5px 5px 6px -3px #000000;
+}
+
+#result {
+  grid-area: result;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  border-radius: 0.625rem 0.625rem 0px 0px;
+}
+
+main button {
+  font-size: 1.7em;
+  border: 0px;
+  padding: 1rem;
+  color: var(--font-color);
+}
+
+main button:hover {
+  opacity: 75%;
+}
+
+#clear {
+  grid-area: C;
+  background-color: var(--darker-color);
+}
+
+#modulus {
+  grid-area: modulus;
+  background-color: var(--darker-color);
+}
+
+#backspace {
+  grid-area: backspace;
+  background-color: var(--darker-color);
+}
+
+#divide {
+  grid-area: divide;
+  background-color: var(--darker-color);
+}
+
+#num-7 {
+  grid-area: num-7;
+  background-color: var(--secondary-color);
+}
+
+#num-8 {
+  grid-area: num-8;
+  background-color: var(--secondary-color);
+}
+
+#num-9 {
+  grid-area: num-9;
+  background-color: var(--secondary-color);
+}
+
+#num-4 {
+  grid-area: num-4;
+  background-color: var(--secondary-color);
+}
+
+#num-5 {
+  grid-area: num-5;
+  background-color: var(--secondary-color);
+}
+
+#num-6 {
+  grid-area: num-6;
+  background-color: var(--secondary-color);
+}
+
+#num-1 {
+  grid-area: num-1;
+  background-color: var(--secondary-color);
+}
+
+#num-2 {
+  grid-area: num-2;
+  background-color: var(--secondary-color);
+}
+
+#num-3 {
+  grid-area: num-3;
+  background-color: var(--secondary-color);
+}
+
+#num-0 {
+  grid-area: num-0;
+  background-color: var(--secondary-color);
+}
+
+#multiply {
+  grid-area: multiply;
+  background-color: var(--darker-color);
+}
+
+#subtract {
+  grid-area: subtract;
+  background-color: var(--darker-color);
+}
+
+#add {
+  grid-area: add;
+  background-color: var(--darker-color);
+}
+
+#equals {
+  grid-area: equals;
+  background-color: var(--primary-color);
+  border-radius: 0px 0px 0.625rem 0px;
+}
+
+#dot {
+  grid-area: dot;
+  background-color: var(--secondary-color);
+}
+
+#plus-minus {
+  grid-area: plus-minus;
+  background-color: var(--secondary-color);
+  border-radius: 0px 0px 0px 0.625rem;
+}
